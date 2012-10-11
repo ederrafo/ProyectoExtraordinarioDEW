@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20121011014647) do
     t.datetime "updated_at",  :null => false
     t.integer  "person_id"
     t.integer  "days"
-    t.integer  "return_date"
+    t.text     "return_date"
   end
 
   create_table "people", :force => true do |t|
