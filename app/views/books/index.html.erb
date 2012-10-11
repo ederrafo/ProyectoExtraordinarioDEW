@@ -1,5 +1,9 @@
-<h1>Listing books</h1>
+<div data-role="page">
+  <div data-role="header">
+    <h1>Listing books</h1>
+  </div><!-- /header -->
 
+  <div data-role="content"> 
 <table>
   <tr>
     <th>Title</th>
@@ -19,7 +23,12 @@
   </tr>
 <% end %>
 </table>
-
+   
+</div><!-- /content -->
 <br />
 
 <%= link_to 'New Book', new_book_path %>
+
+</div><!-- /page -->
+
+
