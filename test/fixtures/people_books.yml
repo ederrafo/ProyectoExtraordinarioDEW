@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  people_id: 1
+  book_id: 1
+  return_date: MyString
+  days: 1
+  status: 1
+
+two:
+  people_id: 1
+  book_id: 1
+  return_date: MyString
+  days: 1
+  status: 1
