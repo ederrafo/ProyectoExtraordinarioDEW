@@ -1,6 +1,11 @@
 class BooksController < ApplicationController
   # GET /books
   # GET /books.json
+  def send_message
+      @book = Book.find(params[:id])
+  end
+    
+  
   def index
     @books = Book.all
 

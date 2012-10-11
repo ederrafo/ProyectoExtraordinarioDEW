@@ -3,7 +3,12 @@ Proyecto::Application.routes.draw do
 
   resources :people
 
-  resources :books
+  resources :books do
+    member do
+      get "send_message" 
+    end
+  end
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

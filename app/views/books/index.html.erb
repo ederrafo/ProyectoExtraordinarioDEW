@@ -9,6 +9,9 @@
   <tr>
     <th>Title</th>
     <th>Description</th>
+    <th>Cliente</th>
+    <th>Fecha</th>
+    <th>Enviar notificacion</th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,6 +21,13 @@
   <tr>
     <td><%= book.title %></td>
     <td><%= book.description %></td>
+    <td><%= book.person.name %></td>
+    <td><%= book.return_date.strftime("%m/%d/%Y") %></td>
+    <td>
+	<%if (Time.now) >= (book.return_date)%>
+	<%= link_to 'Notificar devolucion de libro', send_message_book_path(book) %>
+	<%end%>
+    </td>
     <td><%= link_to 'Show', book %></td>
     <td><%= link_to 'Edit', edit_book_path(book) %></td>
     <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
